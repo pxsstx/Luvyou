@@ -7,33 +7,20 @@
 
 }
 
-body {
+/* body {
     font-family: "Sriracha", cursive;
-    background-image: url('path-to-your-image.jpg');
-    /* ใส่ path ของภาพที่ต้องการใช้ */
-    background-position: center;
-    background-size: cover;
-    /* ทำให้รูปภาพขยายครอบคลุม */
-    background-attachment: fixed;
-    /* ทำให้พื้นหลังคงที่ไม่เลื่อน */
-    height: 100vh;
-    /* พื้นหลังเต็มหน้าจอ */
-}
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    /* ระยะห่างระหว่างการ์ด */
-    padding: 2rem;
-    margin-top: 1rem;
-    /* ระยะห่างจากด้านบน */
+} */
+
+.body-main {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .main {
-    width: 360px;
-    margin: 2rem;
-    height: 560px;
+    width: 100%;
+    height: 450px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
     position: relative;
@@ -79,7 +66,6 @@ body {
 
 .content {
     text-align: center;
-    border-bottom: 2px solid #e5e5e5;
     height: 250px;
     display: flex;
     justify-content: center;
@@ -90,7 +76,10 @@ body {
 }
 
 .content h3 {
-    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #c4c4c4;
+    color: #727272;
+    font-size: .75rem;
 }
 
 .content h1 {
@@ -100,18 +89,9 @@ body {
 }
 
 .content p {
-    color: #9f9f9f;
+    color: #505050;
     font-size: 0.875rem;
     /* ปรับขนาดข้อความให้เล็กลง */
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 0 1rem;
-    /* เพิ่ม padding เพื่อป้องกันการตกขอบ */
 }
 
 .btn-card-footer {
@@ -171,13 +151,15 @@ body {
 }
 
 .normal-text {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 2rem;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* หรือไม่ใส่ก็ได้ */
-    margin-top: 3rem;
-    /* ห่างจากการ์ด */
-    border-radius: 10px;
+    background-color: rgba(46, 42, 42, 0.2);
+    border-radius: 25px;
 }
 
 .normal-text h2 {
@@ -193,17 +175,11 @@ body {
 .header-info {
     display: flex;
     flex-direction: column;
-    /* ตั้งเป็นคอลัมน์ เพื่อให้ข้อความใน div อยู่ในแนวตั้ง */
     justify-content: center;
-    /* จัดตำแหน่งในแนวตั้ง */
     align-items: center;
-    /* จัดตำแหน่งในแนวนอน */
     height: 100vh;
-    /* ใช้ความสูงเต็มหน้าจอ */
     text-align: center;
-    /* ทำให้ข้อความใน h1, p อยู่ตรงกลาง */
-    padding: 0 1rem;
-    /* เพิ่มระยะห่างด้านข้าง */
+    width: 100%;
 }
 
 .header-info h1 {
@@ -233,11 +209,6 @@ body {
     cursor: pointer;
 }
 
-.header-info {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
 .normal-text {
     text-align: center;
     margin-top: 2rem;
@@ -250,28 +221,44 @@ header {
     background-position: center;
     color: #fff;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
 .VDO-conten {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* หรือกำหนดขนาดตามที่ต้องการ */
+    align-content: center;
+    margin-bottom: 3rem;
 }
 
-.VDO-conten iframe {
+.iframe {
     margin-top: 2rem;
     /* หรือเอาออกหากไม่ต้องการระยะห่าง */
-    height: 550px;
-    width: 850px;
+    height: 280px;
+    width: 90%;
     border-radius: 35px;
 }
 
+.card-container {
+    display: flex;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: flex-start;
+    /* จัดตำแหน่งแนวตั้งสำหรับไอเท็ม */
+    gap: 2rem;
+    /* ลดระยะห่างเล็กน้อยสำหรับแถว */
+}
+
 .card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์ */
-    grid-gap: 20px; /* ระยะห่างระหว่างกล่อง */
+    gap: 2rem;
+    margin-top: 1rem;
 }
 
 .card h2 {
@@ -281,17 +268,22 @@ header {
     left: 20px;
     font-size: 1.6rem;
     letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* เพิ่มความโปร่งใสให้กับพื้นหลัง */
+    border-radius: 20px;
+    padding: 0.5rem;
 }
 
-.card 
-.box1,
+.card .box1,
 .box2,
 .box3,
 .box4,
 .box5,
-.box6{
-    width: 100%; /* ใช้เต็มความกว้างที่จัดสรร */
-    height: 450px; /* กำหนดความสูง */
+.box6 {
+    width: 100%;
+    /* ใช้เต็มความกว้างที่จัดสรร */
+    height: 450px;
+    /* กำหนดความสูง */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -314,39 +306,51 @@ header {
     display: table;
     clear: both;
 }
+
 .box1 {
     background-image: url("Photo/LuvM/1.JPG");
 }
+
 .box2 {
     background-image: url("Photo/LuvM/2.jpg");
 }
+
 .box3 {
     background-image: url("Photo/LuvM/3.JPG");
 }
+
 .box4 {
     background-image: url("Photo/LuvM/4.JPG");
 }
+
 .box5 {
     background-image: url("Photo/LuvM/5.jpg");
 }
+
 .box6 {
     background-image: url("Photo/LuvM/6.jpg");
 }
+
 .box7 {
     background-image: url("img/1.JPEG");
 }
+
 .box8 {
     background-image: url("img/2.JPEG");
 }
+
 .box9 {
     background-image: url("img/3.JPEG");
 }
+
 .box10 {
     background-image: url("img/4.JPG");
 }
+
 .box11 {
     background-image: url("img/5.JPG");
 }
+
 .box12 {
     background-image: url("img/6.JPG");
 }
@@ -356,9 +360,11 @@ header {
 .box9,
 .box10,
 .box11,
-.box12{
-    width: 100%; /* ใช้เต็มความกว้างที่จัดสรร */
-    height: 550px; /* กำหนดความสูง */
+.box12 {
+    width: 100%;
+    /* ใช้เต็มความกว้างที่จัดสรร */
+    height: 550px;
+    /* กำหนดความสูง */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -369,174 +375,153 @@ header {
 
 
 .video-card {
-    width: 100%; /* ใช้เต็มพื้นที่ของการ์ด */
-    height: 100%; /* ใช้เต็มพื้นที่ของการ์ด */
-    border-radius: 50px; /* ให้ขอบมุมโค้งเหมือนการ์ด */
-    object-fit: cover; /* จัดการสัดส่วนของวิดีโอ */
-    background: #000; /* ตั้งพื้นหลังเป็นสีดำในกรณีที่ไม่มีวิดีโอ */
+    width: 100%;
+    /* ใช้เต็มพื้นที่ของการ์ด */
+    height: 100%;
+    /* ใช้เต็มพื้นที่ของการ์ด */
+    border-radius: 50px;
+    /* ให้ขอบมุมโค้งเหมือนการ์ด */
+    object-fit: cover;
+    /* จัดการสัดส่วนของวิดีโอ */
+    background: #000;
+    /* ตั้งพื้นหลังเป็นสีดำในกรณีที่ไม่มีวิดีโอ */
 }
 
-
-/* time */
-/* ปรับตำแหน่ง Time Wrapper */
-.time-wrapper {
-    display: flex;
-    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
-    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
-    text-align: center;
-    margin: 2rem auto; /* เว้นระยะจากด้านบนและอยู่กึ่งกลางของ container */
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9); /* เพิ่มพื้นหลังโปร่งแสง */
+.time-img {
+    background-image: url('img/Time.JPEG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 750px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
-    text-align: center;
-
-    /* ปรับความกว้างของกล่อง */
-    width: 500px; /* หรือใช้ค่า 500px ถ้าต้องการขนาดคงที่ */
-    max-width: 1000px; /* เพิ่มขีดจำกัดความกว้าง */
-    height: auto; /* ให้ความสูงปรับตามเนื้อหา */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 .time-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: start;
     margin: 2rem auto;
-    padding: 2rem;
-    background-image: url('img/Time.JPEG');
-    background-repeat: no-repeat; /* ห้ามให้รูปซ้ำ */
-    background-position: center; /* จัดรูปให้อยู่ตรงกลาง */
-    background-size: cover; /* ปรับขนาดรูปให้เต็มพื้นที่ */
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    
+    background-color: rgba(190, 190, 190, 0.3);
+    width: 95%;
+    max-width: 1000px;
+    height: 250px;
 }
 
 
 /* Time Counter */
 .time-counter {
     font-family: "Sriracha", cursive;
-    padding: 2rem;
-    
+    padding: 1rem;
 }
 
 .time-counter time {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
     color: #000000;
     margin-bottom: 1rem;
-    display: block; /* บังคับให้แสดงบนบรรทัดใหม่ */
+    display: block;
+    /* บังคับให้แสดงบนบรรทัดใหม่ */
 }
 
 .countup-timer {
-    font-size: 1.5rem;
-    color: #3f3f3f;
+    font-size: 1rem;
+    color: #000000;
     margin-top: 1rem;
 }
 
 .countup-timer p {
-    margin: 0.5rem 0; /* เว้นระยะห่างระหว่างบรรทัด */
+    margin: 0.5rem 0;
+    /* เว้นระยะห่างระหว่างบรรทัด */
     font-weight: bold;
     color: #3a3a3a;
 }
 
 .label {
     font-size: 1rem;
-    color: #ffee00;
+    color: #a3027e;
     margin-top: 1rem;
 }
+
+.background {
+    margin-top: 5rem;
+}
+
 
 
 /* <===================>
 | Responsive Design |
 <===================> */
 
-/* Default styles (Desktop) */
-
-/* สำหรับ iPhone 15 Pro Max (390px x 844px)  */
- @media only screen and (max-width: 430px) {
-    body {
-        background-size: cover;
-        padding: 1rem;
-    }
-
+@media (min-width: 768px) {
     .card-container {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .main {
-        width: 90%; 
-        height: auto; 
-        margin: 1rem 0;
-    }
-
-    .content h1 {
-        font-size: 1.2rem;
-    }
-
-    .content p {
-        font-size: 0.85rem;
-    }
-
-    .video-card {
-        height: auto; /
-    }
-} 
-
-/* สำหรับ iPad Air 5 และ iPad Pro M2 (768px - 1024px) */
- @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .card-container {
-        flex-wrap: wrap; 
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: row;
+        /* เปลี่ยนเป็นแถวเมื่อหน้าจอกว้างขึ้น */
+        align-items: flex-start;
+        /* จัดตำแหน่งแนวตั้งสำหรับไอเท็ม */
         gap: 2rem;
+        /* ลดระยะห่างเล็กน้อยสำหรับแถว */
+    }
+
+    .iframe {
+        width: 80%;
+        /* ปรับขนาด iframe ให้เล็กลงสำหรับหน้าจอใหญ่ */
+        height: 550px;
+        /* เพิ่มความสูงสำหรับ desktop */
     }
 
     .main {
-        width: 45%; 
-        height: auto;
+        width: 50%;
+        /* ลดความกว้างเพื่อให้การ์ดดูสมส่วนบนหน้าจอใหญ่ */
+        height: 500px;
+        /* เพิ่มความสูง */
+        border-radius: 40px;
+        /* เพิ่มความโค้งมน */
     }
 
-    .header-info {
-        padding: 1rem;
-    }
-
-    .VDO-conten iframe {
-        width: 100%;
-        height: 400px;
+    .card {
+        margin-top: 3rem;
+        width: 90%;
+        /* ปรับขนาดให้แคบลงใน desktop */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3rem;
+        /* เพิ่มช่องว่างระหว่างการ์ด */
     }
 
     .time-wrapper {
-        width: 80%;
-        margin: auto;
-    }
-} 
-
-/* สำหรับหน้าจอใหญ่กว่า iPad Pro */
- @media only screen and (min-width: 1025px) {
-    .card-container {
-        flex-direction: row;
-        gap: 1rem;
+        width: 95%;
+        /* เพิ่มความกว้างบนหน้าจอเล็ก */
+        padding: 1.5rem;
+        /* ลดระยะห่างเพื่อให้เหมาะสมกับหน้าจอเล็ก */
+        height: 350px;
     }
 
-    .main {
-        width: 360px;
+    .time-counter time {
+        font-size: 2rem;
+    }
+
+    .countup-timer {
+        font-size: 2.5rem;
+    }
+
+    .label {
+        font-size: 1.5rem;
+    }
+
+    .body-main {
+        width: 100%;
+        margin-bottom: 3rem;
     }
 }
-
-/* iPad Pro & iPad Air 5 (Medium screens) */
-@media (max-width: 1024px) {
-    .container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    }
-  }
-  
-  /* Mobile devices (Small screens) */
-  @media (max-width: 768px) {
-    .container {
-      grid-template-columns: repeat(1, 1fr); /* 1 column */
-    }
-    .card {
-      padding: 16px; 
-    }
-  }

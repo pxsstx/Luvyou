@@ -1,58 +1,31 @@
-body {
-    margin: 0;
-    overflow: hidden;
-  }
-  
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-/* iPhone 15 Pro Max (428px width) */
-@media (max-width: 428px) {
-  .header-info {
-      padding: 15px;
-      font-size: 14px;
-  }
-
-  .main {
-      max-width: 95%; /* ลดขนาดการ์ด */
-  }
-
-  .card-container {
-      padding: 10px;
-  }
-}
-
-/* iPad Air 5 และ iPad Pro (หน้าจอใหญ่กว่า) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .card-container {
-      justify-content: space-between; /* ให้เรียงห่างกัน */
-  }
-
-  .main {
-      max-width: 45%; /* การ์ดกว้างขึ้น */
-  }
-}
-
-/* สำหรับหน้าจอเล็กกว่า iPhone 15 Pro Max */
-@media (max-width: 375px) {
-  .header-info {
-      font-size: 12px;
-  }
-
-  .main {
-      max-width: 90%; /* ให้การ์ดพอดีกับหน้าจอ */
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* จัดการแคนวาส (สำหรับภาพพื้นหลัง) */
 canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
+/* กำหนด container หลักให้ใช้ flexbox เพื่อจัดตำแหน่ง */
+.main {
+  width: 100%;
+  height: 100vh;
+  /* ใช้ความสูงเต็มหน้าจอ */
+  display: flex;
+  justify-content: center;
+  /* จัดให้อยู่ตรงกลางแนวนอน */
+  align-items: center;
+  /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}

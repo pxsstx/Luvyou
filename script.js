@@ -5,12 +5,12 @@ let w = (c.width = window.innerWidth),
 (hh = h / 2),
   (opts = {
     // change the text in here //
-    strings: ["Happy", "Congratulations!", ""],
+    strings: ["Happy", "Congratulations!"],
     charSize: 30,
     charSpacing: 35,
     lineHeight: 40,
 
-    cx: w / 2,
+    cx: w / 2 ,
     cy: h / 2,
 
     fireworkPrevPoints: 10,
